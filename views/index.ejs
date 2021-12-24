@@ -1,0 +1,20 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+
+<div class="header ">
+    <div class="col-12 ourmenu ">Nasze menu</div>
+</div>
+<div class="container d-flex flex-column justify-content-start mt-4  align-items-start "
+    style="width: 100%;min-height:100vh;">
+    <div class="row  ">
+        <%resources.sort((a,b)=>a.image-b.image).forEach(resource=>{%>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-2  ">
+            <a class="overflow-hidden" target="_blank" href="<%=resource.titleURL%>">
+                <img src="<%=resource.image%>" alt="kot" width="">
+                <div class="product_thumb-text text-center"><%=resource.title%></div>
+            </a>
+        </div>
+        <%})%>
+    </div>
+</div>
+<%-include('./partials/footer')%>

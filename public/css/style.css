@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.container {
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    --bs-gutter-x: 0.1rem;
+    width: 100%;
+}
+
+.row img:hover~.product_thumb-text {
+    background-color: var(--bs-yellow);
+}
+
+.row a {
+    position: relative;
+    color: var(--bs-gray-dark);
+    text-decoration: none;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.row img:hover {
+    transform: scale(1.2);
+    transition: ease-in-out .7s;
+}
+
+.row .col-sm-6 {
+    overflow: hidden;
+}
+
+.row .product_thumb-text {
+    width: 100%;
+    height: 100%;
+    padding: 3px 0px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.ourmenu {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bs-gray-dark);
+    color: var(--bs-white);
+    margin-top: 11vh;
+    font-size: 2rem;
+    font-weight: 700;
+    background-image: url('https://cdn.mcdonalds.pl/public/build/images/bg.c90a2b5f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width:500px) {
+    .ourmenu {
+        background-image: none;
+    }
+    .navbar {
+        position: static;
+    }
+}
